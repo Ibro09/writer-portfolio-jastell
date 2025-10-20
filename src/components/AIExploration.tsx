@@ -88,7 +88,9 @@ export default function ScrollTabs() {
           {/* --- AI EXPLORATION --- */}
           <section
             id="ai"
-            ref={(el) => (sectionRefs.current["ai"] = el)}
+            ref={(el: HTMLElement | null) => {
+              sectionRefs.current["ai"] = el;
+            }}
             className=" flex flex-col justify-center"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
@@ -109,7 +111,9 @@ export default function ScrollTabs() {
           {/* --- IGAMING WRITING --- */}
           <section
             id="igaming-writing"
-            ref={(el) => (sectionRefs.current["igaming-writing"] = el)}
+            ref={(el: HTMLElement | null) => {
+              sectionRefs.current["igaming-writing"] = el;
+            }}
             className="min-h-[100vh] flex flex-col justify-center"
           >
             <h2 className="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
@@ -138,7 +142,9 @@ export default function ScrollTabs() {
           {/* --- IGAMING TUTORIALS --- */}
           <section
             id="igaming-tutorials"
-            ref={(el) => (sectionRefs.current["igaming-tutorials"] = el)}
+            ref={(el: HTMLElement | null) => {
+              sectionRefs.current["igaming-tutorials"] = el;
+            }}
             className="min-h-[100vh] flex flex-col justify-center"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
