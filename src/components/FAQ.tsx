@@ -35,7 +35,7 @@ const faqs = [
 ];
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <section className="min-h-screen bg-black text-white px-6 py-20 flex flex-col items-center w-full">
