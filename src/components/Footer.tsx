@@ -7,9 +7,11 @@ import {
   Instagram,
   Facebook,
   Linkedin,
+  PhoneCall,
+  
 } from "lucide-react";
 import Link from "next/link";
-
+import { FaWhatsapp } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-black text-white w-full">
@@ -30,11 +32,11 @@ export default function Footer() {
         {/* Social Icons */}
         <div className="flex justify-center space-x-6 mb-6">
           {[
-            { icon: Youtube, href: "#" },
-            { icon: Twitter, href: "#" },
-            { icon: Instagram, href: "#" },
-            { icon: Facebook, href: "#" },
-            { icon: Linkedin, href: "#" },
+            { icon: Youtube, href: "https://www.youtube.com/@jastellgaming" },
+            { icon: PhoneCall, href: "tel:+2348165710589" },
+            { icon: Instagram, href: "https://instagram.com/jastellgaming" },
+            { icon: FaWhatsapp, href: "https://wa.me/+2348165710589" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/okpala-stella-jessica" },
           ].map(({ icon: Icon, href }, i) => (
             <a
               key={i}

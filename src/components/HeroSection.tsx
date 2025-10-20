@@ -60,7 +60,7 @@ export default function HeroSection() {
           bg-gradient-to-l from-[#b05197] to-[#5f4ba6] 
           transition-all duration-500 hover:shadow-[0_0_25px_rgba(88,9,68,0.8)]"
         >
-          LET&apos;S have a date
+          LET&apos;S HAVE A DATE
         </motion.button>
       </motion.div>
     </section>
