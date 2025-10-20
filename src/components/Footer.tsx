@@ -8,6 +8,7 @@ import {
   Facebook,
   Linkedin,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -16,11 +17,11 @@ export default function Footer() {
         
         {/* Navigation Links */}
         <nav className="flex flex-wrap justify-center gap-8 text-sm md:text-base mb-6 text-gray-200 tracking-wide">
-          <a href="/" className="hover:text-[#b388eb] transition-colors">HOME</a>
-          <a href="/about" className="hover:text-[#b388eb] transition-colors">ABOUT</a>
-          <a href="/process" className="hover:text-[#b388eb] transition-colors">PROCESS</a>
-          <a href="/service" className="hover:text-[#b388eb] transition-colors">SERVICE</a>
-          <a href="/contact" className="hover:text-[#b388eb] transition-colors">CONTACT</a>
+          <Link href="/" className="hover:text-[#b388eb] transition-colors">HOME</Link>
+          <Link href="/about" className="hover:text-[#b388eb] transition-colors">ABOUT</Link>
+          <Link href="/process" className="hover:text-[#b388eb] transition-colors">PROCESS</Link>
+          <Link href="/service" className="hover:text-[#b388eb] transition-colors">SERVICE</Link>
+          <Link href="/contact" className="hover:text-[#b388eb] transition-colors">CONTACT</Link>
         </nav>
 
         {/* Divider line */}

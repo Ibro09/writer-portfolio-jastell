@@ -199,7 +199,7 @@ function AnimatedNumber({ value, inView }: { value: number; inView: boolean }) {
       setDisplay(0);
       return;
     }
-    let start = 0;
+    const start = 0;
     const duration = 1500; // ms
     const increment = value / (duration / 16); // ~60fps
     let current = start;

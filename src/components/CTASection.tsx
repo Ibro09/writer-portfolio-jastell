@@ -29,7 +29,7 @@ export default function CTASection() {
           whileTap={{ scale: 0.97 }}
           className="bg-gradient-to-l from-[#b05197] to-[#5f4ba6] text-white px-6 md:px-10 py-3 md:py-4 rounded-full text-sm md:text-base font-semibold tracking-wide shadow-[0_0_20px_rgba(88,9,68,0.4)] hover:shadow-[0_0_30px_rgba(88,9,68,0.6)] transition-all"
         >
-          LET'S HAVE A DATE
+          LET&apos;S HAVE A DATE
         </motion.a>
       </motion.div>
     </section>
