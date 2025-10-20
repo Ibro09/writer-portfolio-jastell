@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     // Simulate a short loading duration (2 seconds)
-    const timer = setTimeout(() => setLoading(false), 2000);
+    const timer = setTimeout(() => setLoading(false), 4000);
     return () => clearTimeout(timer);
   }, []);
 
