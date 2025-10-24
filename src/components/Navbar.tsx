@@ -88,7 +88,7 @@ const Navbar = () => {
               damping: 15,
               duration: 0.6,
             }}
-            className="fixed inset-0 bg-black flex flex-col items-center justify-center space-y-8  text-xl z-40"
+            className="fixed inset-0 bg-black flex flex-col items-center justify-center space-y-8  text-xl z-40 text-white"
           >
             {["home", "about", "process", "service", "contact"].map(
               (item, index) => (
@@ -102,7 +102,7 @@ const Navbar = () => {
                 >
                   <Link
                     href={item == "home" ? "/" : `/${item.toLowerCase()}`}
-                    className="hover:text-[#b05197] uppercase"
+                    className="hover:text-[#b05197] uppercase text-white"
                     onClick={() => setIsOpen(false)}
                   >
                     {item}

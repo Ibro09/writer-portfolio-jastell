@@ -11,6 +11,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import YouTubeSection from "@/components/Youtube";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import BlogSection from "@/components/BlogSection";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -32,6 +33,7 @@ export default function Home() {
       <DynamicHeadline />
       <TestimonialsSection />
       <YouTubeSection />
+      <BlogSection/>
       <CTASection />
       <Footer />
     </div>
@@ -79,7 +81,7 @@ const LoadingScreen = () => {
       >
         {text}
         <motion.span
-          className="inline-block w-1 h-8 bg-purple-200 ml-3"
+          className="inline-block w-1 h-8 bg-purple-200 ml-2"
           animate={{ opacity: [0, 1, 0] }}
           transition={{ repeat: Infinity, duration: 0.8 }}
         />

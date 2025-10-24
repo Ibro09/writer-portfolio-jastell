@@ -17,10 +17,10 @@ export default function CTASection() {
         className="relative z-10 max-w-4xl mx-auto flex flex-col items-center"
       >
         <p className="text-sm md:text-base tracking-[0.25em] uppercase text-[#b388eb] mb-3">
-          Call on a Perfect Writer
+          Professional Writing Assistance
         </p>
         <h2 className="text-3xl md:text-5xl font-extrabold leading-tight bg-gradient-to-l from-[#b05197] to-[#5f4ba6] bg-clip-text text-transparent mb-6">
-          Get a perfect piece today!
+          Delivering Excellence in Every Word
         </h2>
 
         <motion.a
