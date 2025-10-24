@@ -44,16 +44,16 @@ export default function CryptoAddictionPage() {
           <p>
             Betting is fun and sometimes, you can get lost in all the fun of it
             and lose track of your funds. This is one thing you should avoid no
-            matter how interesting crypto betting might be to you. You shouldn’t
+            matter how interesting crypto betting might be to you. You shouldn&apos;t
             be so attached to crypto gaming to the extent of taking dangerous
             leaps when playing.
           </p>
 
           <p>
-            That said, it’s about time you look at ways to stop or prevent a
+            That said, it&apos;s about time you look at ways to stop or prevent a
             crypto gaming addiction. This post will give you all the heads-up
             concerning a betting addiction and how to keep it in check. If
-            you’re having problems controlling your love for betting, here’s
+            you&apos;re having problems controlling your love for betting, here&apos;s
             your ultimate guide.
           </p>
 
@@ -103,7 +103,7 @@ export default function CryptoAddictionPage() {
           </h2>
           <p>
             There is no guaranteed way to prevent addiction, but you can lower
-            your risk significantly with awareness and discipline. Here’s how:
+            your risk significantly with awareness and discipline. Here&apos;s how:
           </p>
 
           <ol className="list-decimal list-inside space-y-4">
@@ -114,20 +114,20 @@ export default function CryptoAddictionPage() {
             </li>
             <li>
               <strong>Limit Betting Frequency:</strong> Set strict time slots —
-              once or twice weekly — and avoid "just one quick look" moments.
+              once or twice weekly — and avoid &quot;just one quick look&quot; moments.
             </li>
             <li>
               <strong>Set Spending Caps:</strong> Decide how much you can lose
               without harm. Many platforms allow deposit limits; use them.
             </li>
             <li>
-              <strong>Don’t View Betting as Income:</strong> Remember, it’s
+              <strong>Don&apos;t View Betting as Income:</strong> Remember, it&apos;s
               chance-based — not a career path. Never gamble with rent or
               savings.
             </li>
             <li>
               <strong>Replace the Habit:</strong> Reconnect with friends, pick
-              up old hobbies, or explore new interests that don’t involve
+              up old hobbies, or explore new interests that don&apos;t involve
               betting.
             </li>
           </ol>
@@ -143,7 +143,7 @@ export default function CryptoAddictionPage() {
           </h2>
           <p>
             You should never let crypto betting addiction add to your list of
-            problems. With awareness, limits, and support, it’s possible to
+            problems. With awareness, limits, and support, it&apos;s possible to
             enjoy the thrill of crypto gaming responsibly — without losing
             control.
           </p>
