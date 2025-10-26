@@ -125,12 +125,12 @@ const HeroSectionBg = () => {
 
       {/* Foreground Content */}
       <div className="relative z-10 max-w-3xl px-4">
-        <h1 className="text-6xl md:text-7xl font-extrabold text-white mb-4 leading-tight flex justify-center items-center space-x-3">
+        <h1 className="text-4xl md:text-7xl font-extrabold text-white mb-4 leading-tight flex justify-center items-center space-x-3">
           <motion.span
             initial={{ x: -150, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-          >
+          > 
             Okpala
           </motion.span>
           <motion.span
