@@ -51,7 +51,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="bg-[#0e0e0e] text-center py-3 text-sm text-gray-200">
-        ©2025. A Perfect Writer. All Rights Reserved.
+      © 2025 Expert Writing Services. All rights reserved.
       </div>
     </footer>
   );
