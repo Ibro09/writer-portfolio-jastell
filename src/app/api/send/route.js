@@ -16,7 +16,7 @@ export async function POST(req) {
     // Compose the email
     const info = await transporter.sendMail({
       from: `"${name}" <${email}>`,
-      to: 'ibsalam24@gmail.com', // receiver email (your email)
+      to: 'jastell312@gmail.com', // receiver email (your email)
       subject: `New Message from ${name}`,
       text: message,
       html: `

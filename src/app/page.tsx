@@ -21,6 +21,30 @@ export default function Home() {
     const timer = setTimeout(() => setLoading(false), 4000);
     return () => clearTimeout(timer);
   }, []);
+  
+const [posts, setPosts] = useState([]);
+  const usersPerPage = 10;
+
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        // setLoading(true);
+        const res = await fetch("/api/posts");
+        const data = await res.json();
+        console.log(data);
+
+        setPosts(data);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      } finally {
+        // setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
 
   if (loading) return <LoadingScreen />;
 

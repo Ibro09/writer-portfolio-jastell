@@ -19,9 +19,11 @@ const Navbar = () => {
     <header
       className={`${
         isScrolled
-          ? "fixed top-3 left-1/2 -translate-x-1/2 shadow-lg bg-black/90 border border-gray-700"
+          ? `fixed top-3 left-1/2 shadow-lg bg-black/90 border border-gray-700 ${isOpen ? "-translate-x-1/2" : " -translate-x-1/2"}`
           : "bg-black border border-gray-800"
-      } z-50 w-[90%] rounded-[40px] transition-all duration-300 mt-4`}
+      } ${
+        isOpen ? "z-40" : "z-50"
+      } w-[90%] rounded-[40px] transition-all duration-300 mt-4`}
     >
       <div className="container mx-auto flex items-center justify-between  px-6">
         {/* Logo */}
@@ -38,7 +40,7 @@ const Navbar = () => {
         {/* Desktop Navbar */}
         <nav className="hidden md:flex">
           <ul className="flex space-x-6 text-white">
-            {["Home", "About", "Process", "Service"].map((item) => (
+            {["Home", "About", "Process", "Service", "Blog"].map((item) => (
               <li key={item}>
                 <Link
                   href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
@@ -88,9 +90,9 @@ const Navbar = () => {
               damping: 15,
               duration: 0.6,
             }}
-            className="fixed inset-0 bg-black flex flex-col items-center justify-center space-y-8  text-xl z-40 text-white"
+            className="fixed inset-0 top-0 bg-black flex flex-col items-center justify-center space-y-8 text-xl z-50 text-white border h-[85vh] w-[85vw]"
           >
-            {["home", "about", "process", "service", "contact"].map(
+            {["home", "about", "process", "service","blog", "contact"].map(
               (item, index) => (
                 <motion.div
                   key={item}

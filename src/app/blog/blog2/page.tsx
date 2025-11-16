@@ -32,7 +32,7 @@ export default function CryptoAddictionPage() {
           transition={{ delay: 0.3 }}
           className="max-w-5xl mx-auto mb-16 rounded-3xl overflow-hidden shadow-[0_0_30px_rgba(88,9,68,0.3)]"
         >
-          <Image
+          <img
             src="/images/blog2.png"
             alt="Crypto Betting Addiction Awareness"
             className="w-full h-[400px] object-cover"

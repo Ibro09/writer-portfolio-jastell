@@ -22,18 +22,18 @@
 
 /* Local Stolzl font (place files in public/fonts/) */
 @font-face {
-  font-family: "stolzl";
+  /* font-family: "stolzl";
   src: url('/fonts/Stolzl-Regular.woff2') format('woff2'),
-    url('/fonts/Stolzl-Regular.woff') format('woff');
+    url('/fonts/Stolzl-Regular.woff') format('woff'); */
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "stolzl";
+  /* font-family: "stolzl";
   src: url('/fonts/Stolzl-Bold.woff2') format('woff2'),
-    url('/fonts/Stolzl-Bold.woff') format('woff');
+    url('/fonts/Stolzl-Bold.woff') format('woff'); */
   font-weight: 700;
   font-style: bold;
   font-display: swap;
@@ -42,7 +42,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "stolzl", var(--font-roboto-mono), var(--font-mono), var(--font-sans), sans-serif;
+  font-family: "", var(--font-roboto-mono), var(--font-mono), var(--font-sans), sans-serif;
 }
 
 /* Hide scrollbar but keep scroll functionality */
