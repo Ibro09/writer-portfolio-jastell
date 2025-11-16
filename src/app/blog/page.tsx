@@ -54,7 +54,7 @@ const blogPosts: StaticBlogPost[] = [
   },
 ];
 
-export default function BlogSection(): JSX.Element {
+export default function BlogSection() {
   const [posts, setPosts] = useState<FetchPost[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);

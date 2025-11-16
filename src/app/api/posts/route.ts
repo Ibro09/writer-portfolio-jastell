@@ -2,27 +2,40 @@ import { NextRequest, NextResponse } from "next/server";
 import connect from "../../../lib/mongodb";
 import Post from "../../../models/Post";
 
+// Define Post fields
+interface Section {
+  title: string;
+  content: string;
+}
+
+interface PostData {
+  title?: string;
+  content?: string;
+  sections?: Section[];
+  image?: string; // base64
+  [key: string]: string | Section[] | undefined; // allow other string fields
+}
+
 export async function GET(req: NextRequest) {
   const start = Date.now();
   try {
     await connect();
     console.log("Connected in", Date.now() - start, "ms");
 
-    // support ?limit=&page= for pagination
     const url = new URL(req.url);
     const limit = Math.min(Number(url.searchParams.get("limit") || "20"), 200);
     const page = Math.max(Number(url.searchParams.get("page") || "1"), 1);
     const skip = (page - 1) * limit;
 
-    // IMPORTANT: exclude heavy fields (image base64) and use lean() for speed
+    // Exclude image for speed
     const posts = await Post.find({}, { image: 0 })
       .skip(skip)
       .limit(limit)
       .lean()
-      .maxTimeMS(10000); // fail faster if server is slow
+      .maxTimeMS(10000);
 
     console.log("Query finished in", Date.now() - start, "ms, returned:", posts.length);
-    return NextResponse.json( posts);
+    return NextResponse.json(posts);
   } catch (err) {
     console.error("GET /api/posts error after", Date.now() - start, "ms:", err);
     return NextResponse.json(
@@ -32,35 +45,33 @@ export async function GET(req: NextRequest) {
   }
 }
 
-
 export async function POST(req: NextRequest) {
   await connect();
 
   try {
-    let postData: any = {};
+    let postData: PostData = {};
     const contentType = (req.headers.get("content-type") || "").toLowerCase();
 
     if (contentType.includes("multipart/form-data")) {
       const fd = await req.formData();
-      for (const [k, v] of fd.entries()) {
-        if (k === "sections") {
+      for (const [key, value] of fd.entries()) {
+        if (key === "sections" && typeof value === "string") {
           try {
-            // Parse sections JSON string to array
-            const parsed = JSON.parse(v as string);
-            postData[k] = Array.isArray(parsed) ? parsed : [];
-          } catch (parseErr) {
-            console.error("Error parsing sections JSON:", parseErr);
-            postData[k] = [];
+            const parsed = JSON.parse(value) as Section[];
+            postData.sections = Array.isArray(parsed) ? parsed : [];
+          } catch (err) {
+            console.error("Error parsing sections JSON:", err);
+            postData.sections = [];
           }
-        } else if (v instanceof File) {
-          const bytes = await v.arrayBuffer();
-          postData[k] = Buffer.from(bytes).toString("base64");
-        } else {
-          postData[k] = v;
+        } else if (value instanceof File) {
+          const bytes = await value.arrayBuffer();
+          postData.image = Buffer.from(bytes).toString("base64");
+        } else if (typeof value === "string") {
+          postData[key] = value;
         }
       }
     } else if (contentType.includes("application/json")) {
-      postData = await req.json();
+      postData = (await req.json()) as PostData;
     }
 
     console.log("Post data:", postData);

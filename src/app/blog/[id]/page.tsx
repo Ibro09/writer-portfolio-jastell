@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 interface Section {
   title: string;
@@ -20,7 +21,7 @@ interface BlogPost {
   createdAt?: string;
 }
 
-export default function BlogPostPage(): JSX.Element {
+export default function BlogPostPage() {
   const params = useParams() as { id?: string };
   const id = params?.id;
   const [post, setPost] = useState<BlogPost | null>(null);
@@ -67,12 +68,12 @@ export default function BlogPostPage(): JSX.Element {
           <h1 className="text-2xl font-bold mb-4">
             {error || "Article not found"}
           </h1>
-          <a
+          <Link
             href="/blog"
             className="text-[#b075ff] hover:text-[#e0b2ff] transition-all"
           >
             ← Back to Blog
-          </a>
+          </Link>
         </div>
       </div>
     );
